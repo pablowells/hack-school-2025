@@ -21,7 +21,7 @@ const getPoll = async (req, res) => {
 };
 
 // replace {} parameter with req, res
-const postPoll = async ({ req, res }) => {
+const postPoll = async ( req, res ) => {
   // extract poll information from req
   const{ ownerId } = req.body;
   const {title } = req.body;
