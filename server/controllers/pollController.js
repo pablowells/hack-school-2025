@@ -23,9 +23,9 @@ const getPoll = async (req, res) => {
 // replace {} parameter with req, res
 const postPoll = async ({ req, res }) => {
   // extract poll information from req
-  const{ ownerId } = req.params;
-  const {title } = req.params;
-  const { options} = req.params;
+  const{ ownerId } = req.body;
+  const {title } = req.body;
+  const { options} = req.body;
 
   if (!ownerId || !title || !options) res.status(404).json({error: 'Invalid Request'}); // replace with 404 Error
 
